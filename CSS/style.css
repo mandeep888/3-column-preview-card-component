@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Big+Shoulders+Display:wght@200&family=IM+Fell+DW+Pica&family=Lexend+Deca:wght@100&family=Lobster&family=Suez+One&display=swap');
+
+:root{
+    --orange: hsl(31, 77%, 52%);
+    --cyan:hsl(184, 100%, 22%);
+    --dark_cyan:hsl(179, 100%, 13%);
+    --light_gray_white: hsl(0, 0%, 95%);
+    --transparent_white:hsla(0, 0%, 100%, 0.75);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: whitesmoke;
+    font-family: 'Lexend Deca', sans-serif;
+    
+}
+.container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inner_container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 1000px;
+    height:70vh;
+}
+.card{
+    padding:2.3rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.card1{
+    border: 2px solid var(--orange);
+    border-top-left-radius:8px;
+    border-bottom-left-radius: 8px;
+    background-color: var(--orange);
+}
+.card2{
+    background-color: var(--cyan);
+}
+.card3{
+    border: 2px solid var(--dark_cyan);
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: var(--dark_cyan);
+}
+.image{
+    width:70px;
+
+}
+.card_text{
+    font-family: 'Lexend Deca', sans-serif;
+    color: var(--light_gray_white);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-right: 3rem;
+}
+.card_heading{
+    font-family: 'Big Shoulders Display', cursive ;
+    color:var(--light_gray_white);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    font-weight:900;
+}
+.btn{
+    margin-top: auto;
+    background-color: var(--light_gray_white);
+    width:175px;
+    padding:1rem 1.5rem ;
+    border: 2px solid white;
+    border-radius: 30px;
+    transition: all 0.3s;
+}
+.btn1{
+    color: var(--orange);
+}
+.btn2{
+    color:var(--cyan);
+}
+.btn3{
+    color: var(--dark_cyan);
+}
+.btn:hover{
+    border: 2px solid white;
+    color: white;
+    cursor: pointer;
+}
+.btn1:hover{
+    background-color:var(--orange);
+}
+.btn2:hover{
+    background-color: var(--cyan)
+}
+.btn3:hover{
+    background-color: var(--dark_cyan);
+}
+@media only screen and (max-width:400px){
+    .container{
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .inner_container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        margin:3rem 30px;
+        width: 375px;
+    }
+    .card1{
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        border-bottom-left-radius: 0px;
+    }
+    .card3{
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        border-top-right-radius: 0px;
+    }
+}
